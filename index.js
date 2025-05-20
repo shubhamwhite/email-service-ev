@@ -1,5 +1,5 @@
-const startEmailConsumer = require('./src/consumers/email.consumer');
+const startEmailConsumer = require('./src/consumers/email.consumer')
 
 startEmailConsumer().then(() => {
-  console.log('Email Service running - listening to RabbitMQ...');
-});
+  console.log('Email Service running - listening to RabbitMQ...')
+})
