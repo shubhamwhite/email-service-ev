@@ -4,7 +4,7 @@ const path = require('path')
 const ejs = require('ejs')
 
 const transporter = nodeMailer.createTransport({
-  service: 'gmail',
+  service: config.get('EMAIL_SERVICE'),
   auth: {
     user: config.get('EMAIL_USER'),
     pass: config.get('EMAIL_PASSWORD')

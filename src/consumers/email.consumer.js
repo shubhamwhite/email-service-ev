@@ -1,8 +1,9 @@
 const amqp = require('amqplib')
+const config = require('../config/')
 const sendOtpToEmail = require('../service/emailProvider')
 
 async function startEmailConsumer() {
-  const connection = await amqp.connect('amqp://127.0.0.1')
+  const connection = await amqp.connect(config.get('AMQP_URL'))
   const channel = await connection.createChannel()
   await channel.assertQueue('emailQueue')
 
